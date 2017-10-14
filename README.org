@@ -1,0 +1,156 @@
+* Null Space Labs
+
+  [[http://032.la][Null Space Labs]] (or =NSL=) is a [[http://hackerspaces.org/][hacker space]] in Los Angeles, California.
+
+** When are classes held at NSL?
+  
+  Just about every Saturday a class is held.
+  
+  Check out the [[http://www.meetup.com/NullSpaceLabs/events/][events on MeetUp]] to see what is upcoming.
+
+** Where is NSL?
+
+   We are located at [[https://www.google.com/maps/place/10717+W+Chandler+Blvd,+North+Hollywood,+CA+91601][10717 West Chandler Blvd in North Hollywood, California]]:
+
+   - Check https://www.google.com/maps/place/10717+W+Chandler+Blvd,+North+Hollywood,+CA+91601
+
+* Python Classes
+
+** How much do the classes cost?
+
+   The NSL Python classes vary in price from $25 to $100 each depending on the complexity of the course primarily.
+
+   | Level           | Class                  | Cost |
+   |-----------------+------------------------+------|
+   | Programming 101 | Introduction to Python | $25  |
+   | Programming 201 | Intermediate Python    | $50  |
+   | Programming 301 | Advanced Python        | $100 |
+
+   You can pay at the door in cash or other electronic methods on site.
+
+** Prepare your computer before the class
+
+    - Install the latest Python 3 package from the [[http://python.org/download/][official python download page]]
+
+      - http://python.org/download/
+
+      - OR install the latest Python 3 package available through your operating system's package management
+
+    - Have your editor of choice or IDE ready to go
+
+    - OR just bring an SSH client (Mac, Linux already has it, use [[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html][PuTTY]] on Windows)
+
+      -  With SSH we will provide you a shell with python and some editors
+
+    - OR *NEW* just bring a Web Browser ([[https://www.mozilla.org/en-US/firefox/new/][Firefox]] and [[https://www.google.com/chrome/browser/][Chrome]] should work almost everywhere)
+
+** Prepare your brain before the class
+
+    - http://docs.python.org/3/tutorial/
+
+    - https://docs.python.org/3/library/idle.html
+
+    - http://www.codecademy.com/tracks/python
+
+    - http://learnpython.org
+
+* Programming 101: Introduction to Python
+
+  Learn all about programming with the easy-to-learn and use language: Python!
+  
+  This is the first class in a series of three python programming classes appropriate for any hackers interested in computer programming and software development.
+  
+  This class is graciously hosted by NSL Keyholder Merlin!
+
+** What will we cover?
+   
+   Practical Python language basics will be covered from the ground up.
+
+   At the end of the class we'll work on some adventure games.
+   
+*** Topics we'll cover
+
+    - Why Python is BALLER
+
+    - How to Python (ensuring everyone has some kind of working Python environment before we start)
+
+    - Literals, built-in types, and variables
+
+    - Functions, modules, and objects (briefly and shallowly)
+
+    - Operators, loops, and conditionals
+
+    - Functions, modules, and objects (a bit deeper, as time permits)
+
+*** Projects we'll do
+
+    - Work on adventure games
+
+* Programming 201: Intermediate Python
+
+  Learn all about programming with the easy-to-learn and use language: Python!
+
+  This is the second class in a series of three python programming classes appropriate for any hackers interested in computer programming and software development.
+  
+  This class is graciously hosted by NSL Keyholder Merlin!
+
+** What will we cover?
+   
+   Python language basics will be reviewed as a refresher for anyone coming from our Python 101 class, and to ensure we're all on the same page before diving into intermediate topics.
+
+   If you already know basic programming and specifically basic python programming, but want to learn how to actually engineer software in python, this class will be of special interest to you.
+
+   If you just want to see and experience more of "Why Python is Baller", we'll have some things for you.
+   
+   See below for instructions on what you need before the class (Python and a text editor, basically) as well as some introductory material for those who want to get a head start.
+   
+*** Topics we'll review
+
+    - Why Python is BALLER
+
+    - Types, variables, operators, conditionals, loops, functions
+
+*** Topics we'll cover in depth
+
+    - Standard Python Functions
+      
+      - Almost all of them!
+
+    - Standard Python Libraries
+
+      - A few of them, anyway!
+
+      - Also how to learn more about them
+
+    - Generators and comprehensions
+
+    - Modules and packages
+
+    - Command line arguments and interfaces
+
+    - Tour of well known powerful libraries
+
+** How much does the class cost?
+
+   This class costs $50 for anyone who isn't a member of Null Space Labs.
+
+   You can pay at the door in cash or other electronic methods on site.
+
+* Programming 301: Advanced Python
+
+   Learn all about programming with the easy-to-learn language: Python!
+
+   This is the third class in a series of three python programming classes appropriate for any hackers interested in computer programming and software development.
+
+   This class is graciously hosted by NSL Keyholder Merlin!
+
+** What will we cover?
+
+   This class is currently unspecified!
+
+** How much does the class cost?
+
+   This class costs $100 for anyone who isn't a member of Null Space Labs.
+
+   You can pay at the door in cash or other electronic methods on site.
+
