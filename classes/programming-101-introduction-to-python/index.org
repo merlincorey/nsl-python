@@ -1,0 +1,382 @@
+* Programming 101: Introduction to Python
+
+  Welcome to *NSL 3.0's* class *Programming 101: Introduction to Python* where you, the aspiring Python Hacker will watch, learn, and do in your quest to create.
+
+  This is a beginner's introduction but hopefully you at least have a copy of [[http://python.org/download/][Python]] *version 3* available to you and an editor of some kind (for later).
+
+  This class is interactive and you should feel free to follow along in your own environments and ask questions whenever you need -- others probably have the same questions, so be brave!
+
+** How to Python
+
+   On most systems once you have Python installed you can start a *Python Shell* from any terminal or run bar by invoking =python=.  In some instances, this will open an [[https://docs.python.org/2/library/idle.html][IDLE]] shell.
+
+   #+CAPTION: Starting Python from a Unix shell
+   #+BEGIN_EXAMPLE
+   $ python3
+   Python 3.6.1 (default, Jul 13 2017, 01:14:50)
+   [GCC 4.2.1 Compatible FreeBSD Clang 3.4.1 (tags/RELEASE_34/dot1-final 208032)] on freebsd10
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>>
+   #+END_EXAMPLE
+
+   #+CAPTION: Starting Python from Powershell on Windows
+   #+BEGIN_EXAMPLE
+   PS C:\Users\merlin> python
+   Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)] on win32
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>>
+   #+END_EXAMPLE
+
+** Further resources
+
+   - [[http://docs.python.org/3/tutorial/][Python 3 Documentation: Tutorial]]
+   - [[https://docs.python.org/3/library/idle.html][Python 3 Documentation: IDLE]]
+   - [[http://www.codecademy.com/tracks/python][Python course at Codecademy]]
+   - [[http://learnpython.org][Python course at LearnPython]]
+
+* Why Python is BALLER
+
+** Pros
+
+   - Frontend to C :: Almost all of the power of C without as many rituals or foot-guns -- unless you get into *CPython*, then you get it all
+   - Embedability :: Almost everything can run Python since it is basically C underneath; [[https://www.raspberrypi.org/documentation/usage/python/][Raspberry-Pi]] is famous for its Python integration
+   - Writeability :: Easy to write most things with at least one obvious way to do anything
+   - Readability :: Easy to read most code later, especially if it follows the *Zen of Python*
+   - Discoverability :: Easy to learn about things within the language and online with tons of third party libraries
+   - Recyclability :: Quick to keep iterating and refactoring upon ideas
+   - Portability :: Same code works on quite a number of processor architectures and is available for quite a lot of operating systems
+   - Lingua Franca :: People from many walks of life and domains of knowledge know and use Python
+   - Spider Python :: Very Web friendly both as a consumer and a producer
+   - Prototyping :: Quick to get started with just about anything thanks to all of the above
+
+** Neutral
+
+   - No Braces :: One less braceface in the world of programming
+   - BDFL :: [[https://gvanrossum.github.io][Guido Van Rossum]], *Benevolent Dictator For Life*
+   - Dynamic Ducks :: [[https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information][Dynamic Typing]] lends itself to some of the *pros* _and_ some of the *cons*, but it is just a fact of the language
+   - Static Stoics :: [[https://docs.python.org/3/library/typing.html][Type Hints]] are available since *Python 3.5* and there is the [[http://mypy-lang.org][mypy static type checker]]
+
+** Cons
+
+   - FIOC :: Forced Indentation of Code
+   - GIL :: [[https://wiki.python.org/moin/GlobalInterpreterLock][Global Interpreter Lock]]
+   - [[http://benchmarksgame.alioth.debian.org/u64q/python.html][Expensive in Memory and CPU]] :: In part due to the above but also as a consequence of other language design and implementation choices
+   - Exceptional :: Exceptions have some benefits but they are, ultimately, [[https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf][potentially harmful]] and require discipline to use
+   - Immobile :: Even though Python has a piece of the Embedded world, it doesn't correlate to a piece of the Mobile and Browser worlds
+
+** Easter Eggs
+
+   #+CAPTION: Part of a series on Why Python is BALLER
+   #+NAME: 02-Baller
+   #+BEGIN_EXAMPLE
+   >>> from __future__ import braces
+   >>> import __hello__
+   >>> import this
+   >>> import antigravity
+   >>> antigravity.geohash(34.1688932, -118.3664655, b'2017-10-14-10458.68')
+   34.000958 -118.465353
+   >>> import webbrowser
+   >>> webbrowser.open('http://032.la/')
+   #+END_EXAMPLE
+
+   - [[./02-Baller.html][Computer rendering of Why Python is BALLER]]
+   - [[https://xkcd.com/353/][Artist rendering of Why Python is BALLER]]
+   - [[https://docs.python.org/3/library/webbrowser.html][Python 3 webbrowser Module Documentation]]
+
+* Literals, built-in types, and variables
+
+  The [[https://docs.python.org/3/library/index.html#library-index][Python Standard Library]] contains a list of [[https://docs.python.org/3/library/constants.html][Built-in constants]], [[https://docs.python.org/3/library/stdtypes.html][Built-in Types]], and operators on those types.
+
+  - Literal :: Literal representation of some *value* /i.e./ =7= is literally the number seven
+  - Value :: some *type* of _thing_ we can contain as a concept and manipulate /i.e./ =7= plus =1= is the *value* =8=
+  - Type :: Categorization or class of *values* that includes the representation and behavior for manipulation /i.e./ =7= and =8= are both a *type* of =number=, or =integer= that can be manipulated by arithmetic *operations*
+  - Operation :: Some method of manipulating a *value* or *values* /i.e./ in =7 + 1= we use the =+= operator to =add= the *values*, combining them into a new larger value
+
+** Basic Calculator
+
+   #+CAPTION: Using Python as a basic calculator
+   #+NAME: 03-Calculator
+   #+BEGIN_EXAMPLE
+   >>> 2 + 4
+   >>> -2 - 7
+   >>> 3 * 3
+   >>> 3 ** 3
+   >>> 8 / 2
+   >>> 8 // 3
+   >>> 3 / 10
+   >>> 11 % 2
+   >>> 713 ** 43
+   >>> 1.34E-8 + 5.42E-8
+   >>> (15 / 5 - 2)
+   >>> (15 / 5) - 2
+   >>> 15 / (5 - 2)
+   #+END_EXAMPLE
+
+   - [[./03-Calculator.html][Computer rendering of Using Python as a basic calculator]]
+
+** Built in Types
+
+   - Integers :: Whole or counting numbers
+   - Floats :: Fractional values called *Floating* _decimal_ point values
+   - NoneType :: A special type with a single value named =None=
+   - Booleans :: Logical values =True= and =False=
+   - Strings :: Ordered sequences (/aka/ *lists*) of (usually) *characters* in quote /i.e./ ='The quick brown fox jumped over the lazy dog'= is a string with every letter of the alphabet
+   - Characters :: Fancy name for single letters (if only it were that simple) -- *Note:* this is not a separate type in Python, but it is in /C/
+   - Lists :: Compound type that contains an ordered sequence of values of any type /i.e./ =[True, 'this is', 1, 'mixed bag']= is a list with several types of values inside it
+   - Dictionaries :: Mappings (/aka/ _hashmaps_) of _key_ values to a single _data_ value /i.e./ ={'hack': 'the planet'}= /maps/ the *string* ='hack'= to the *string* ='the planet'=
+
+   #+CAPTION: Using the Built in Types
+   #+NAME: 03-Types
+   #+BEGIN_EXAMPLE
+   >>> 0.1 + 0.2
+   >>> 6 / 0
+   #+END_EXAMPLE
+
+   - [[./03-Types.html][Computer rendering of Using the Built in Types]]
+
+
+** Variables
+
+   - Variable :: A name that is also a valid [[https://docs.python.org/3/reference/lexical_analysis.html#identifiers][identifier]] which references a mutable *value*, /i.e./ =x= and =y= are common variable names for numeric values but =income= and =expenses= are better names if applicable
+
+   #+BEGIN_QUOTE
+   There are only two hard things in Computer Science: cache invalidation and naming things.
+   -- Phil Karlton
+   #+END_QUOTE
+
+   #+BEGIN_QUOTE
+   There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.
+   -- Leon Bambrick
+   #+END_QUOTE
+
+   #+CAPTION: Using Variables
+   #+NAME: 03-Variables
+   #+BEGIN_EXAMPLE
+   >>> a, b, c = (1, 2, 3)
+   #+END_EXAMPLE
+
+   - [[./03-Variables.html][Computer rendering of Using Variables]]
+
+* Functions, modules, and objects (briefly and shallowly)
+
+  The [[https://docs.python.org/3/library/index.html#library-index][Python Standard Library]] contains a list of around =70= [[https://docs.python.org/3/library/functions.html][Built-in Functions]], well over =100= Built-in [[https://docs.python.org/3/tutorial/modules.html][modules]], and innumerable [[https://docs.python.org/3/tutorial/classes.html][Classes of Objects]] from those modules.
+
+  - Function :: /in computer science/: A type of procedure or routine and /in mathematics/: a relation between a set of input values and a set of output values
+  - Module :: A persistent collection of python variables, *functions*, and *objects* defined within a python file
+  - Object :: Concept for some kind of *member* data and its behaviors separated into the abstract *class* and concrete *instance*
+  - Class :: The abstract representation of a type /i.e./ a =hacker= is a type *class* of =people=
+  - Instance :: The concrete representation of a specific *instance* of a *class of object* /i.e./ *you* are a =hacker=, and *I* am a =hacker=, but /we are not the same/ =hacker=
+  - Member :: Data or functions attached to a class /i.e./ 'member when your birthday happened?  Your age data *member* increased by a value of =1=
+  - Method :: A member function is often referred to as a method /i.e./ use your =hack_harder= *method* if any of this is confusing to you
+
+** Functions and Objects
+
+   # TODO: Update with latest from notebook
+   #+CAPTION: Using Functions and Objects
+   #+NAME: 04-Funjects
+   #+BEGIN_EXAMPLE
+   >>> f = 2x + 2
+   >>> f = lambda x: (2 * x) + 2
+   >>> f
+   >>> f(0)
+   >>> f(1)
+   >>> f(23)
+   >>> def double(x):
+           return x * 2
+   >>> def square(x):
+           return x * x
+   >>> double
+   >>> square
+   >>> help(square)
+   >>> double(5)
+   >>> square(5)
+   >>> type(1)
+   >>> type(1.2)
+   >>> type('nsl')
+   >>> id(1)
+   >>> x = 1
+   >>> id(x) == id(1)
+   >>> seq = []
+   >>> len(seq)
+   >>> dir(seq)
+   >>> seq.append(2)
+   >>> seq.append(1)
+   >>> seq.append(3)
+   >>> len(seq)
+   >>> seq
+   >>> seq.index(2)
+   >>> seq[1] == seq[seq.index(2)]
+   >>> seq.sort()
+   >>> seq
+   #+END_EXAMPLE
+
+   - [[./04-Funjects.html][Computer rendering of Using Functions and Objects]]
+
+** Modules
+
+   If you end your python shell session, all the variables and functions you defined will be lost.  That simply won't do!
+
+   #+CAPTION: maths module
+   #+NAME: maths
+   #+BEGIN_SRC python
+'''Simple circle maths module in terms of tau where simplest'''
+
+from math import pi
+
+
+def double(x):
+    '''Return twice the value given.'''
+    return x * 2
+
+tau = double(pi)
+
+
+def square(x):
+    '''Return the square of the value given.'''
+    return x * x
+
+
+def diameter(radius):
+    '''Return the diameter of a circle given the radius.'''
+    return double(radius)
+
+
+def circumfrence(radius):
+    '''Return the circumfrence of a circle given the radius.'''
+    return tau * radius
+
+
+def area(radius):
+    '''Return the area of a circle given the radius.'''
+    return pi * square(radius)
+   #+END_SRC
+
+   #+CAPTION: Using the circle.py module
+   #+NAME: 04-Cirque
+   #+BEGIN_EXAMPLE
+   >>> import circle
+   >>> circle.pi
+   >>> circle.tau
+   >>> circle.area(2)
+   >>> circle.circumfrence(2)
+   >>> circle.area(10)
+   >>> circle.circumfrence(10)
+   #+END_EXAMPLE
+
+   - [[./04-Cirque.html][Computer rendering of Using the circle.py module]]
+
+* Operators, loops, and conditionals
+
+  #+CAPTION: Using operators, conditionals, and loops
+  #+NAME: Operloopditionals
+  #+BEGIN_SRC python
+
+  #+END_SRC
+
+  - [[./06-Operloopditionals.html][Computer rendering of Using operators, conditionals, and loops]]
+
+* Functions, modules, and objects (a bit deeper, as time permits)
+
+
+  #+CAPTION: Going deeper with functions, modules, and objects
+  #+NAME: Funky
+  #+BEGIN_SRC python
+
+  #+END_SRC
+
+  - [[./07-Funky.html][Computer rendering of Going deeper with functions, modules, and objects]]
+
+
+* Adventure games
+
+** Datagram's Sweet Adventure
+
+   Ported to Python3 by Merlin with love!
+
+   #+CAPTION: Datagram's Sweet Adventure Game
+   #+NAME: 08-Dataventure
+   #+BEGIN_SRC python
+   print('=' * 30)
+   print('Welcome to my Awesome Program!')
+   print('=' * 30)
+
+   print()
+   a = input('What is your name? ')
+   print('Your name is: {}'.format(a))
+   print()
+   b = input('Are you ready for an adventure? ')
+   print()
+   if 'yes' == b.lower():
+       print('ADVENTURE TIME\n' * 5)
+   else:
+       print('FINE BE THAT WAY')
+   #+END_SRC
+
+** Template Adventure
+
+   If you can't wait to get adventuring but aren't quite sure where to start, here's an example template to get you going:
+
+   #+CAPTION: Adventure Game Template
+   #+NAME: adventure.py
+   #+BEGIN_SRC python
+'''Adventure game by INSERTYOURNAMEHERE.
+
+INSERTDESCRIPTIONHERE
+
+ANDHERE TOO
+'''
+
+import sys
+
+
+def adventure():
+    '''Play the adventure, reading from standard input and writing to standard output.'''
+
+    rooms = {'lab': 'A bright and messy labratory.',
+             'toilet': 'A dark and clean toilet.'}
+    room = 'lab'
+
+    name = input('Welcome traveler!  What be yer name? ')
+    print('That is a strange name, {}, but I like it.'.format(name))
+
+    living = True
+    winning = False
+    while living and not winning:
+        print('You are in the {}'.format(room))
+        print(rooms[room])
+        action = input('What will {} do?\n> '.format(name)).strip().lower()
+
+        if 'die' == action:
+            print('Suddenly, you do not feel so good.  Maybe you should lie down.')
+            living = False
+        elif 'north' == action:
+            if 'lab' == room:
+                room = 'toilet'
+        elif 'south' == action:
+            if 'toilet' == room:
+                room = 'lab'
+        elif 'sleep' == action:
+            print('You feel fine, no need to sleep.')
+        else:
+            print('Not sure what you meant by that, boss.')
+
+
+    if living:
+        print('You made it out alive, {}!'.format(name))
+    else:
+        print('Sorry, {}, but you are DEAD!'.format(name))
+
+    if winning:
+        print('I am not sure how, but you also managed to win!  Great job!')
+
+
+def main(argv):
+    '''Return exit code as integer, receives commandline arguments as list of strings, runs Adventure in between.'''
+    adventure()
+    return 0
+
+if '__main__' == __name__:
+    sys.exit(main(sys.argv))
+   #+END_SRC
+
+   - [[./adventure.py][Download adventure.py]]

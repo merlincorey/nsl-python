@@ -54,7 +54,7 @@
 
     - http://learnpython.org
 
-* Programming 101: Introduction to Python
+* [[./classes/programming-101-introduction-to-python/][Programming 101: Introduction to Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
   
