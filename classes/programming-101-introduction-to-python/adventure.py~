@@ -1,0 +1,18 @@
+'''Adventure game by INSERTYOURNAMEHERE.
+
+INSERTDESCRIPTIONHERE
+
+ANDHERE
+
+ANDHERE TOO'''
+
+import sys
+
+
+def main(argv):
+    '''Return exit code as integer, receives commandline arguments as list of strings, runs Adventure in between.'''
+
+    return 0
+
+if '__main__' == __name__:
+    sys.exit(main(sys.argv))
