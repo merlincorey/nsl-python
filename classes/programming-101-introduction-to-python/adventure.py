@@ -28,10 +28,10 @@ def adventure():
         if 'die' == action:
             print('Suddenly, you do not feel so good.  Maybe you should lie down.')            
             living = False
-        elif 'north':
+        elif 'north' == action:
             if 'lab' == room:
                 room = 'toilet'
-        elif 'south':
+        elif 'south' == action:
             if 'toilet' == room:
                 room = 'lab'
         elif 'sleep' == action:
