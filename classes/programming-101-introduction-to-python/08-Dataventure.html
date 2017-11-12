@@ -11773,7 +11773,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
@@ -11813,14 +11813,9 @@ Welcome to my Awesome Program!
 What is your name? Merlin
 Your name is: Merlin
 
-Are you ready for an adventure? yes
+Are you ready for an adventure? no
 
-ADVENTURE TIME
-ADVENTURE TIME
-ADVENTURE TIME
-ADVENTURE TIME
-ADVENTURE TIME
-
+FINE BE THAT WAY
 </pre>
 </div>
 </div>
@@ -11831,57 +11826,67 @@ ADVENTURE TIME
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;Adventure game by INSERTYOURNAMEHERE.</span>
+
+<span class="sd">INSERTDESCRIPTIONHERE</span>
+
+<span class="sd">ANDHERE TOO</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
 
 
 <span class="k">def</span> <span class="nf">adventure</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;Play the adventure, reading from standard input and writing to standard output.&#39;&#39;&#39;</span>
 
     <span class="n">rooms</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;lab&#39;</span><span class="p">:</span> <span class="s1">&#39;A bright and messy labratory.&#39;</span><span class="p">,</span>
-	     <span class="s1">&#39;toilet&#39;</span><span class="p">:</span> <span class="s1">&#39;A dark and clean toilet.&#39;</span><span class="p">}</span>
+             <span class="s1">&#39;toilet&#39;</span><span class="p">:</span> <span class="s1">&#39;A dark and clean toilet.&#39;</span><span class="p">}</span>
     <span class="n">room</span> <span class="o">=</span> <span class="s1">&#39;lab&#39;</span>
-
+    
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Welcome traveler!  What be yer name? &#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is a strange name, </span><span class="si">{}</span><span class="s1">, but I like it.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
-
+    
     <span class="n">living</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">winning</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">while</span> <span class="n">living</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">winning</span><span class="p">:</span>
-	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are in the </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">room</span><span class="p">))</span>
-	<span class="nb">print</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="p">])</span>
-	<span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What will </span><span class="si">{}</span><span class="s1"> do?</span><span class="se">\n</span><span class="s1">&gt; &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are in the </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">room</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="p">])</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What will </span><span class="si">{}</span><span class="s1"> do?</span><span class="se">\n</span><span class="s1">&gt; &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
-	<span class="k">if</span> <span class="s1">&#39;die&#39;</span> <span class="o">==</span> <span class="n">action</span><span class="p">:</span>
-	    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Suddenly, you do not feel so good.  Maybe you should lie down.&#39;</span><span class="p">)</span>            
-	    <span class="n">living</span> <span class="o">=</span> <span class="kc">False</span>
-	<span class="k">elif</span> <span class="s1">&#39;north&#39;</span><span class="p">:</span>
-	    <span class="k">if</span> <span class="s1">&#39;lab&#39;</span> <span class="o">==</span> <span class="n">room</span><span class="p">:</span>
-		<span class="n">room</span> <span class="o">=</span> <span class="s1">&#39;toilet&#39;</span>
-	<span class="k">elif</span> <span class="s1">&#39;south&#39;</span><span class="p">:</span>
-	    <span class="k">if</span> <span class="s1">&#39;toilet&#39;</span> <span class="o">==</span> <span class="n">room</span><span class="p">:</span>
-		<span class="n">room</span> <span class="o">=</span> <span class="s1">&#39;lab&#39;</span>
-	<span class="k">elif</span> <span class="s1">&#39;sleep&#39;</span> <span class="o">==</span> <span class="n">action</span><span class="p">:</span>
-	    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You feel fine, no need to sleep.&#39;</span><span class="p">)</span>
-	<span class="k">else</span><span class="p">:</span>
-	    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not sure what you meant by that, boss.&#39;</span><span class="p">)</span>
-
+        <span class="k">if</span> <span class="s1">&#39;die&#39;</span> <span class="o">==</span> <span class="n">action</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Suddenly, you do not feel so good.  Maybe you should lie down.&#39;</span><span class="p">)</span>            
+            <span class="n">living</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="s1">&#39;north&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;lab&#39;</span> <span class="o">==</span> <span class="n">room</span><span class="p">:</span>
+                <span class="n">room</span> <span class="o">=</span> <span class="s1">&#39;toilet&#39;</span>
+        <span class="k">elif</span> <span class="s1">&#39;south&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;toilet&#39;</span> <span class="o">==</span> <span class="n">room</span><span class="p">:</span>
+                <span class="n">room</span> <span class="o">=</span> <span class="s1">&#39;lab&#39;</span>
+        <span class="k">elif</span> <span class="s1">&#39;sleep&#39;</span> <span class="o">==</span> <span class="n">action</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You feel fine, no need to sleep.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not sure what you meant by that, boss.&#39;</span><span class="p">)</span>
+            
 
     <span class="k">if</span> <span class="n">living</span><span class="p">:</span>
-	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You made it out alive, </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You made it out alive, </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorry, </span><span class="si">{}</span><span class="s1">, but you are DEAD!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorry, </span><span class="si">{}</span><span class="s1">, but you are DEAD!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">winning</span><span class="p">:</span>
-	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am not sure how, but you also managed to win!  Great job!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am not sure how, but you also managed to win!  Great job!&#39;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Return exit code as integer, receives commandline arguments as list of strings, runs Adventure in between.&#39;&#39;&#39;</span>
     <span class="n">adventure</span><span class="p">()</span>
     <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="s1">&#39;__main__&#39;</span> <span class="o">==</span> <span class="vm">__name__</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11897,12 +11902,49 @@ ADVENTURE TIME
 <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome traveler!  What be yer name? merlin
+That is a strange name, merlin, but I like it.
+You are in the lab
+A bright and messy labratory.
+What will merlin do?
+&gt; north
+You are in the toilet
+A dark and clean toilet.
+What will merlin do?
+&gt; south
+You are in the toilet
+A dark and clean toilet.
+What will merlin do?
+&gt; die
+Suddenly, you do not feel so good.  Maybe you should lie down.
+Sorry, merlin, but you are DEAD!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-2-ce00e549b262&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">17</span>
-<span class="ansi-red-fg">    print(&#39;You are in the {}&#39;.format(room))</span>
-                                           ^
-<span class="ansi-red-fg">TabError</span><span class="ansi-red-fg">:</span> inconsistent use of tabs and spaces in indentation
+An exception has occurred, use %tb to see the full traceback.
+
+<span class="ansi-red-fg">SystemExit</span><span class="ansi-red-fg">:</span> 0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/home/merlin/development/github.com/merlincorey/nsl-python/env/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2918: UserWarning: To exit: use &#39;exit&#39;, &#39;quit&#39;, or Ctrl-D.
+  warn(&#34;To exit: use &#39;exit&#39;, &#39;quit&#39;, or Ctrl-D.&#34;, stacklevel=1)
 </pre>
 </div>
 </div>
@@ -11913,7 +11955,7 @@ ADVENTURE TIME
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">adventure</span>
@@ -11926,7 +11968,7 @@ ADVENTURE TIME
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">adventure</span><span class="o">.</span><span class="n">main</span><span class="p">([])</span>
@@ -11946,35 +11988,60 @@ ADVENTURE TIME
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Welcome traveler!  What be yer name? Merlin
-That is a strange name, Merlin, but I like it.
+<pre>Welcome traveler!  What be yer name? merles
+That is a strange name, merles, but I like it.
 You are in the lab
 A bright and messy labratory.
-What will Merlin do?
-&gt; look
-You are in the toilet
-A dark and clean toilet.
-What will Merlin do?
-&gt; pee
-You are in the toilet
-A dark and clean toilet.
-What will Merlin do?
+What will merles do?
 &gt; die
 Suddenly, you do not feel so good.  Maybe you should lie down.
-Sorry, Merlin, but you are DEAD!
+Sorry, merles, but you are DEAD!
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adventure</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;adventure&#39;</pre>
 </div>
 
 </div>
