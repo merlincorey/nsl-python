@@ -286,7 +286,6 @@ def area(radius):
 
   - [[./07-Funky.html][Computer rendering of Going deeper with functions, modules, and objects]]
 
-
 * Adventure games
 
 ** Datagram's Sweet Adventure
