@@ -286,7 +286,6 @@ def area(radius):
 
   - [[./07-Funky.html][Computer rendering of Going deeper with functions, modules, and objects]]
 
-
 * Adventure games
 
 ** Datagram's Sweet Adventure
@@ -311,6 +310,8 @@ def area(radius):
    else:
        print('FINE BE THAT WAY')
    #+END_SRC
+
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-start-datagram][repl.it Datagram's Adventure Game]]
 
 ** Template Adventure
 
@@ -380,3 +381,4 @@ if '__main__' == __name__:
    #+END_SRC
 
    - [[./adventure.py][Download adventure.py]]
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-template-merlin][repl.it Merlin's Adventure Game]]
