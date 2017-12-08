@@ -18,12 +18,12 @@
 
 ** How much do the classes cost?
 
-   The NSL Python classes vary in price from $25 to $100 each depending on the complexity of the course primarily.
+   The NSL Python classes vary in price from $30 to $100 each depending on the complexity of the course primarily.
 
    | Level           | Class                  | Cost |
    |-----------------+------------------------+------|
-   | Programming 101 | Introduction to Python | $25  |
-   | Programming 201 | Intermediate Python    | $50  |
+   | Programming 101 | Introduction to Python | $30  |
+   | Programming 201 | Intermediate Python    | $60  |
    | Programming 301 | Advanced Python        | $100 |
 
    You can pay at the door in cash or other electronic methods on site.
