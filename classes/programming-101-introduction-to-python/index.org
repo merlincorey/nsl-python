@@ -311,6 +311,8 @@ def area(radius):
        print('FINE BE THAT WAY')
    #+END_SRC
 
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-start-datagram][repl.it Datagram's Adventure Game]]
+
 ** Template Adventure
 
    If you can't wait to get adventuring but aren't quite sure where to start, here's an example template to get you going:
@@ -379,3 +381,4 @@ if '__main__' == __name__:
    #+END_SRC
 
    - [[./adventure.py][Download adventure.py]]
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-template-merlin][repl.it Merlin's Adventure Game]]
