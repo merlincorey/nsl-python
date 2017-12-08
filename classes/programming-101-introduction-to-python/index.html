@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>index</title>
-<!-- 2017-10-15 Sun 00:37 -->
+<!-- 2017-12-07 Thu 23:34 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Merlin" />
+<meta  name="author" content="merlin" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -603,7 +603,6 @@ def area(radius):
 </div>
 </div>
 
-
 <div id="outline-container-sec-7" class="outline-2">
 <h2 id="sec-7"><span class="section-number-2">7</span> Adventure games</h2>
 <div class="outline-text-2" id="text-7">
@@ -632,6 +631,11 @@ else:
     print('FINE BE THAT WAY')
 </pre>
 </div>
+
+<ul class="org-ul">
+<li><a href="https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-start-datagram">repl.it Datagram's Adventure Game</a>
+</li>
+</ul>
 </div>
 </div>
 
@@ -658,7 +662,7 @@ def adventure():
     '''Play the adventure, reading from standard input and writing to standard output.'''
 
     rooms = {'lab': 'A bright and messy labratory.',
-	     'toilet': 'A dark and clean toilet.'}
+             'toilet': 'A dark and clean toilet.'}
     room = 'lab'
 
     name = input('Welcome traveler!  What be yer name? ')
@@ -667,32 +671,32 @@ def adventure():
     living = True
     winning = False
     while living and not winning:
-	print('You are in the {}'.format(room))
-	print(rooms[room])
-	action = input('What will {} do?\n&gt; '.format(name)).strip().lower()
+        print('You are in the {}'.format(room))
+        print(rooms[room])
+        action = input('What will {} do?\n&gt; '.format(name)).strip().lower()
 
-	if 'die' == action:
-	    print('Suddenly, you do not feel so good.  Maybe you should lie down.')
-	    living = False
-	elif 'north' == action:
-	    if 'lab' == room:
-		room = 'toilet'
-	elif 'south' == action:
-	    if 'toilet' == room:
-		room = 'lab'
-	elif 'sleep' == action:
-	    print('You feel fine, no need to sleep.')
-	else:
-	    print('Not sure what you meant by that, boss.')
+        if 'die' == action:
+            print('Suddenly, you do not feel so good.  Maybe you should lie down.')
+            living = False
+        elif 'north' == action:
+            if 'lab' == room:
+                room = 'toilet'
+        elif 'south' == action:
+            if 'toilet' == room:
+                room = 'lab'
+        elif 'sleep' == action:
+            print('You feel fine, no need to sleep.')
+        else:
+            print('Not sure what you meant by that, boss.')
 
 
     if living:
-	print('You made it out alive, {}!'.format(name))
+        print('You made it out alive, {}!'.format(name))
     else:
-	print('Sorry, {}, but you are DEAD!'.format(name))
+        print('Sorry, {}, but you are DEAD!'.format(name))
 
     if winning:
-	print('I am not sure how, but you also managed to win!  Great job!')
+        print('I am not sure how, but you also managed to win!  Great job!')
 
 
 def main(argv):
@@ -708,15 +712,17 @@ if '__main__' == __name__:
 <ul class="org-ul">
 <li><a href="./adventure.py">Download adventure.py</a>
 </li>
+<li><a href="https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-template-merlin">repl.it Merlin's Adventure Game</a>
+</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Merlin</p>
-<p class="date">Created: 2017-10-15 Sun 00:37</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="author">Author: merlin</p>
+<p class="date">Created: 2017-12-07 Thu 23:34</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
