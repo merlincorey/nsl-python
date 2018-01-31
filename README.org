@@ -132,9 +132,13 @@
 
 ** How much does the class cost?
 
-   This class costs $50 for anyone who isn't a member of Null Space Labs.
+   This class costs $60 for anyone who isn't a member of Null Space Labs.
 
    You can pay at the door in cash or other electronic methods on site.
+
+** Projects we'll do
+
+   - Work on Multi User Dungeons
 
 * Programming 301: Advanced Python
 
