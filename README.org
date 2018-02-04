@@ -54,7 +54,7 @@
 
     - http://learnpython.org
 
-* [[./classes/programming-101-introduction-to-python/][Programming 101: Introduction to Python]]
+* [[file:classes/programming-101-introduction-to-python/index.org][Programming 101: Introduction to Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
   
@@ -86,7 +86,7 @@
 
     - Work on adventure games
 
-* Programming 201: Intermediate Python
+* [[file:classes/programming-101-introduction-to-python/index.org][Programming 201: Intermediate Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
 
