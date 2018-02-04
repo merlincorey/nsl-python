@@ -35,7 +35,6 @@
    - [[http://learnpython.org][Python course at LearnPython]]
 
 * Why Python is BALLER
-
 ** Pros
 
    - Frontend to C :: Almost all of the power of C without as many rituals or foot-guns -- unless you get into *CPython*, then you get it all
@@ -45,6 +44,7 @@
    - Discoverability :: Easy to learn about things within the language and online with tons of third party libraries
    - Recyclability :: Quick to keep iterating and refactoring upon ideas
    - Portability :: Same code works on quite a number of processor architectures and is available for quite a lot of operating systems
+   - Packagability :: Modules are easy to package and distribute to multiple systems and architectures
    - Lingua Franca :: People from many walks of life and domains of knowledge know and use Python
    - Spider Python :: Very Web friendly both as a consumer and a producer
    - Prototyping :: Quick to get started with just about anything thanks to all of the above
@@ -286,7 +286,6 @@ def area(radius):
 
   - [[./07-Funky.html][Computer rendering of Going deeper with functions, modules, and objects]]
 
-
 * Adventure games
 
 ** Datagram's Sweet Adventure
@@ -311,6 +310,8 @@ def area(radius):
    else:
        print('FINE BE THAT WAY')
    #+END_SRC
+
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-start-datagram][repl.it Datagram's Adventure Game]]
 
 ** Template Adventure
 
@@ -380,3 +381,4 @@ if '__main__' == __name__:
    #+END_SRC
 
    - [[./adventure.py][Download adventure.py]]
+   - [[https://repl.it/@merlincorey/nsl-python-101-introduction-adventure-template-merlin][repl.it Merlin's Adventure Game]]

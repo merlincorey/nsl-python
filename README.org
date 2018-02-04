@@ -18,12 +18,12 @@
 
 ** How much do the classes cost?
 
-   The NSL Python classes vary in price from $25 to $100 each depending on the complexity of the course primarily.
+   The NSL Python classes vary in price from $30 to $100 each depending on the complexity of the course primarily.
 
    | Level           | Class                  | Cost |
    |-----------------+------------------------+------|
-   | Programming 101 | Introduction to Python | $25  |
-   | Programming 201 | Intermediate Python    | $50  |
+   | Programming 101 | Introduction to Python | $30  |
+   | Programming 201 | Intermediate Python    | $60  |
    | Programming 301 | Advanced Python        | $100 |
 
    You can pay at the door in cash or other electronic methods on site.
@@ -54,7 +54,7 @@
 
     - http://learnpython.org
 
-* [[./classes/programming-101-introduction-to-python/][Programming 101: Introduction to Python]]
+* [[file:classes/programming-101-introduction-to-python/index.org][Programming 101: Introduction to Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
   
@@ -86,7 +86,7 @@
 
     - Work on adventure games
 
-* Programming 201: Intermediate Python
+* [[file:classes/programming-101-introduction-to-python/index.org][Programming 201: Intermediate Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
 
@@ -132,9 +132,13 @@
 
 ** How much does the class cost?
 
-   This class costs $50 for anyone who isn't a member of Null Space Labs.
+   This class costs $60 for anyone who isn't a member of Null Space Labs.
 
    You can pay at the door in cash or other electronic methods on site.
+
+** Projects we'll do
+
+   - Work on Multi User Dungeons
 
 * Programming 301: Advanced Python
 
