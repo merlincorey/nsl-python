@@ -1,0 +1,312 @@
+* Programming 201: Intermediate Python             :30:minutes:welcome:setup:
+
+  Welcome to *NSL 3.0's* class *Programming 201: Intermediate Python* where you, the aspiring Python Hacker will watch, learn, and do in your quest to create.
+
+  This is an intermediate level exploration immediately following our beginner level *Programming 101: Introduction to Python*.
+
+  Hopefully you at least have:
+
+    - [[http://python.org/download/][Python]] *version 3* available to you
+    - [[https://virtualenv.pypa.io][virtualenv]] installed with your operating system or [[https://pip.pypa.io/en/stable/installing/][pip]]
+    - An [[https://docs.python.org/3/library/idle.html][IDE]] or [[https://www.gnu.org/software/emacs/][editor]] of [[http://www.vim.org/][some]] [[https://www.sublimetext.com/][kind]] for editing python files
+
+  This class is interactive and you should feel free to follow along in your own environments and ask questions whenever you need -- others probably have the same questions, so be brave!
+
+** How to virtualenv                                             :10:minutes:
+
+   On most systems once you have =virtualenv= installed you can create a new environment with Python 3 like so:
+
+   #+CAPTION: Creating a virtualenv in a Unix shell
+   #+BEGIN_EXAMPLE
+   $ virtualenv -p python3 env
+   Already using interpreter /usr/bin/python3
+   Using base prefix '/usr'
+   New python executable in env/bin/python3
+   Also creating executable in env/bin/python
+   Installing setuptools, pkg_resources, pip, wheel...done.
+   #+END_EXAMPLE
+
+   On windows you should use =py -m virtualenv -p python3 env=.
+
+   Virtual environment activation is done by executing a script called activate.
+   There are several versions to support several different shells.
+   Most commonly you will use one of the following methods:
+
+   #+CAPTION: Activating a virtual environment on Unix with zsh, bash, or dash
+   #+BEGIN_EXAMPLE
+   $ source env/bin/activate
+   #+END_EXAMPLE
+
+   #+CAPTION: Activating a virtual environment on Unix with a classic shell
+   #+BEGIN_EXAMPLE
+   $ . env/bin/activate
+   #+END_EXAMPLE
+
+   #+CAPTION: Activating a virtual environment on windows
+   #+BEGIN_EXAMPLE
+   PS> env\Scripts\activate
+   #+END_EXAMPLE
+
+   Simply close your terminal or use the command =deactivate= to break out of an activated virtual environment.
+
+** How to jupyter                                                :10:minutes:
+
+   Once you have an activated virtual environment, you can use =pip= to install =jupyter=.
+
+   #+CAPTION: Installing jupyter with pip in Unix evironments
+   #+BEGIN_EXAMPLE
+   $ pip install jupyter
+   #+END_EXAMPLE
+
+   #+CAPTION: Installing jupyter with pip in Windows environments
+   #+BEGIN_EXAMPLE
+   PS> py -m pip install jupyter
+   #+END_EXAMPLE
+
+   #+CAPTION: Some of the output when pip installing jupyter
+   #+BEGIN_EXAMPLE
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl
+Collecting jupyter-console (from jupyter)
+  Downloading jupyter_console-5.2.0-py2.py3-none-any.whl
+Collecting ipywidgets (from jupyter)
+  Downloading ipywidgets-7.1.1-py2.py3-none-any.whl (68kB)
+    100% |████████████████████████████████| 71kB 706kB/s
+Collecting qtconsole (from jupyter)
+  Downloading qtconsole-4.3.1-py2.py3-none-any.whl (108kB)
+    100% |████████████████████████████████| 112kB 1.1MB/s
+Collecting ipykernel (from jupyter)
+  Downloading ipykernel-4.8.0-py3-none-any.whl (108kB)
+    100% |████████████████████████████████| 112kB 982kB/s
+Collecting nbconvert (from jupyter)
+  Downloading nbconvert-5.3.1-py2.py3-none-any.whl (387kB)
+    100% |████████████████████████████████| 389kB 728kB/s
+Collecting notebook (from jupyter)
+  Downloading notebook-5.4.0-py2.py3-none-any.whl (8.0MB)
+    100% |████████████████████████████████| 8.0MB 84kB/s
+Collecting jupyter-client (from jupyter-console->jupyter)
+  Downloading jupyter_client-5.2.2-py2.py3-none-any.whl (88kB)
+    100% |████████████████████████████████| 92kB 1.2MB/s
+Collecting ipython (from jupyter-console->jupyter)
+  Using cached ipython-6.2.1-py3-none-any.whl
+Collecting prompt-toolkit<2.0.0,>=1.0.0 (from jupyter-console->jupyter)
+  Using cached prompt_toolkit-1.0.15-py3-none-any.whl
+Collecting pygments (from jupyter-console->jupyter)
+  Using cached Pygments-2.2.0-py2.py3-none-any.whl
+...
+Successfully built tornado pandocfilters
+Installing collected packages: six, ipython-genutils, decorator, traitlets, tornado, jupyter-core, python-dateutil, pyzmq, jupyter-client, pickleshare, simplegeneric, pygments, ptyprocess, pexpect, wcwidth, prompt-toolkit, parso, jedi, ipython, ipykernel, jupyter-console, Send2Trash, terminado, MarkupSafe, jinja2, jsonschema, nbformat, testpath, pandocfilters, webencodings, html5lib, bleach, entrypoints, mistune, nbconvert, notebook, widgetsnbextension, ipywidgets, qtconsole, jupyter
+Successfully installed MarkupSafe-1.0 Send2Trash-1.4.2 bleach-2.1.2 decorator-4.2.1 entrypoints-0.2.3 html5lib-1.0.1 ipykernel-4.8.0 ipython-6.2.1 ipython-genutils-0.2.0 ipywidgets-7.1.1 jedi-0.11.1 jinja2-2.10 jsonschema-2.6.0 jupyter-1.0.0 jupyter-client-5.2.2 jupyter-console-5.2.0 jupyter-core-4.4.0 mistune-0.8.3 nbconvert-5.3.1 nbformat-4.4.0 notebook-5.4.0 pandocfilters-1.4.2 parso-0.1.1 pexpect-4.3.1 pickleshare-0.7.4 prompt-toolkit-1.0.15 ptyprocess-0.5.2 pygments-2.2.0 python-dateutil-2.6.1 pyzmq-16.0.4 qtconsole-4.3.1 simplegeneric-0.8.1 six-1.11.0 terminado-0.8.1 testpath-0.3.1 tornado-4.5.3 traitlets-4.3.2 wcwidth-0.1.7 webencodings-0.5.1 widgetsnbextension-3.1.3
+   #+END_EXAMPLE
+
+   Now run =jupyter notebook= to start the notebook server and open a browser to [[http://localhost:8888/tree]].
+
+   Alternatively, you can run =jupyter console= for a console notebook experience.
+
+   Finally, just use =ipython= if you just want an enhanced python shell but don't need to store your inputs and outputs.
+
+   Easy as *Pie-thon*!
+
+*** Makefile :bonus:
+
+    This repository comes with a top-level Makefile that will create a top-level environment and install all the packages used in these lessons.
+
+    - init :: Target to initialize an environment by creating it and installing requirements in it
+    - env :: Target to create environment if not already created
+    - requirements :: Target to activate if necessary and install the requirements.txt packages into the environment
+    - jupyter-start :: Target to start a jupyter notebook in =JUPYTER_PATH=
+    - jupyter-publish :: Target to publish =JUPYTER_PATH='s notebooks into HTML files
+
+    Unfortunately, this will not work on Windows, generally and historically.
+   
+** Further resources                                             :10:minutes:
+*** [[https://pip.pypa.io/en/stable/user_guide/][pip User Guide]]
+*** [[https://virtualenv.pypa.io/en/stable/userguide/][virtualenv User Guide]]
+*** [[http://docs.python.org/3/tutorial/][Python 3 Documentation: Tutorial]]
+*** [[https://docs.python.org/3/library/idle.html][Python 3 Documentation: IDLE]]
+*** [[http://www.codecademy.com/tracks/python][Python course at Codecademy]]
+* Reviewing Programming 101: Introduction to Python       :60:minutes:review:
+** Why Python is BALLER :5:minutes:
+
+   - Easy to Learn and Use :: =Writeability=, =Readability=, and =Discoverability=
+   - Easy to Prototype :: =Recyclability=, =Lingua Franca=
+   - Easy to Deploy :: =Embedability=, =Portability=, and =Packagability=
+
+   [[https://xkcd.com/353/][Artist rendering of Why Python is BALLER]]
+
+** Types, variables, operators, conditionals, loops, and functions :55:minutes:
+*** Types :7:minutes:
+
+    - Types :: *abstract* descriptions of the *state* and *behavior* of an idealized =class= of =objects= (mostly compile-time)
+    - Objects :: *concrete* instances of a type of =class= (always run-time)
+    - hacker :: A =class=
+    - you :: An =object= or instance of =class hacker=
+    - me :: A different =object= or instance of =class hacker=
+
+*** Variables :7:minutes:
+
+    - Variables :: Valid [[https://docs.python.org/3/reference/lexical_analysis.html#identifiers][identifier]] named *values* of particular *objects*
+    - you, me :: Variables, of course!
+
+*** Operators :7:minutes:
+
+    - Operations :: An area of management concerned with designing and controlling the process of production and redesigning business *operations* in the production of goods or services
+    - Operations :: Methods of manipulating and inspecting =objects=
+    - + :: Addition operator, usually used to *add* things together in some manner
+    - . :: Dot operator, used to refer to =class= member attributes
+    - =you.age + me.age= :: Your age, plus my age, equals *a meaningless number*
+
+*** Conditionals :7:minutes:
+
+    - Conditionals :: Logical conditions using [[https://en.wikipedia.org/wiki/Boolean_algebra][boolean algebra]] to *branch* code into choices of what to do
+    - ~'even' if you.age % 2 == 0 else 'odd'~ :: Find out if you're an *odd* hacker today!
+
+*** Loops :7:minutes:
+
+    - Loops :: Repeating code infinitely or over a sequence of things
+    - while True: print('loops repeat things') :: =loops repeat things loops repeat things loops repeat things loops repeat things loops repeat things...=
+
+*** Functions :7:minutes:
+
+    - Functions :: Stored *procedures*, or recipes, of code that can be *invoked* later and *return* some value
+
+* Intermediate Python                                            :45:minutes:
+** Functions                                                      :9:minutes:
+
+   - Variadic :: The property of a =function= that can receive a *variable* number of arguments
+   - Optional :: Defaults can be set for arguments of a function rendering them *optional*
+   - Keyword :: Keyword arguments are the basis of *optional* arguments and are part of variadic arguments
+
+** Classes                                                        :9:minutes:
+
+   - class :: Keyword to define a new =class=
+   - __init__ :: Method called when an =object= of a =class= is *instantiated*
+   - __str__ :: Method called when an =object= is converted to a string
+   - __repr__ :: Method called when the =representation= of an =object= is needed
+
+   See [[https://docs.python.org/3/reference/datamodel.html#basic-customization][Python3 Documentation - Basic Configuration]] for more!
+
+** Generators                                                    :9:minutes:
+
+   - Coroutines :: Special functions for [[https://en.wikipedia.org/wiki/Cooperative_multitasking][cooperative multitasking]]
+   - yield :: Keyword to communicate a return value and potentially receive an input value from a *coroutine*
+
+** Comprehensions                                                :9:minutes:
+
+   - Comprehensions :: Special *syntax* that emulates *Mathematics* [[https://en.wikipedia.org/wiki/Set-builder_notation][set-builder notation]]
+   - {x | x in S and x even} :: Mathematical set notation describing =the set of values x in set S that are even=
+   - Comprehesion Types :: Python supports *comprehensions* for =lists=, =generators=, =dictionaries=, and =sets=
+
+** Modules and Packages                                           :9:minutes:
+
+   - Modules :: Every python file is a *module*
+   - Packages :: Any folder with an =__init__.py= is a *package* of *modules*
+
+* Intermission                                                   :15:minutes:
+
+   On the origins of Python, Van Rossum wrote in *1996*:
+
+   #+CAPTION: Nameday story of Python
+   #+BEGIN_QUOTE
+    ...In December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
+    — Guido van Rossum
+   #+END_QUOTE
+
+   - [[https://www.youtube.com/watch?v=WwIbaYstoPs][A Selection of Sketches from "Monty Python's Flying Circus" - #1]]
+   - [[https://www.youtube.com/watch?v=JXfosKV7jIo][A Selection of Sketches from "Monty Python's Flying Circus" - #2]]
+   - [[https://www.youtube.com/watch?v=AxheoB6QbDc][A Selection of Sketches from "Monty Python's Flying Circus" - #3]]
+
+* Standard Python                                                :90:minutes:
+** Functions                                                     :60:minutes:
+   
+   The [[https://docs.python.org/3/library/functions.html][Python 3 Documentation: Built-in Functions]] lists *68* functions which we will further break into *5* categories.
+
+*** Numeric                                                       :9:minutes:
+
+   - abs :: ABSolute value of a number
+   - bin :: Convert an =integer= to a string literal =representation= of the value in binary (base 2)
+   - complex :: Return a =complex= number with the value =real + (imaginary * 1i)= given a =string= representing a complex number or two =integers=
+   - divmod :: Integer divide two non-complex numbers and return a =pair= of the =(quotient, remainder)=
+   - float :: Convert an object to a floating point value, including "NaN" and "Infinity"
+   - hex :: Convert an integer to a =string= literal =representation= of the value in hexadecimal (base 16)
+   - int :: Convert an object to an =integer= value, including =string= literal =representations= in other bases
+   - max :: Maximum value of a sequence of numbers
+   - min :: Minimum value of a sequence of numbers
+   - oct :: Convert an =integer= to a =string= literal =representation= of the value in octal (base 8)
+   - round :: Round a floating point number to the nearest =integer= or number of decimal places given
+   - pow :: Power of =X to the Y= or power of =X to the Y modulus Z=
+   - sum :: Summation of a sequence of numbers
+
+*** Logicical Predicates                                          :9:minutes:
+
+   - all :: Predicate that returns =True= if every value in the given sequence is truthy
+   - any :: Predicate that returns =True= if at least one value in the given sequence is truthy
+   - callable :: Predicate that returns =True= if the given value is a =callable= function
+   - hasattr :: Predicate that returns =True= if the given object has a member attribute with the same name as the given =string=
+   - isinstance :: Predicate that returns =True= if the given value is an instance of the given class or classes
+   - issubclass :: Predicate that returns =True= if the given value is a subclass or the same class
+
+*** Functional and Iterable                                       :9:minutes:
+
+   - enumerate :: Return an enumerate object given an =iterable= sequence which yields =pairs= of =(index, value)=
+   - filter :: Return an =iterator= given an =iterable= whose values return =True= with the given =predicate= function 
+   - frozenset :: Return a new immutable =frozenset= optionally with elements taken from an =iterable=
+   - iter :: Return an =iterator= from the given object, optionally stopping at some =sentinel= value
+   - len :: Return the length of a sequence
+   - list :: Return a =list= from the given object
+   - map :: Return an =iterator= that applies the given function to every item and yields the results
+   - next :: Retrieve the next item from the =iterator= by calling its =__next__= method
+   - range :: Return a =range= of numbers which are yielded as needed. [[https://docs.python.org/3/library/stdtypes.html#typesseq-range][Ranges]] are an immutable [[https://docs.python.org/3/library/stdtypes.html#typesseq][sequence type]]
+   - reversed :: Return a reverse =iterator= of the given sequence
+   - set :: Return a new =set= optionally with elements taken from an =iterable=
+   - slice :: Return a =slice= representing the set of indices specified by =range(start, stop, step)
+   - sorted :: Return a new sorted list from the given =iterable=
+   - tuple :: Return an immutable sequence from the given object
+   - zip :: Return an =iterator= that aggregates elements from each given =iterable= into tuples of values for each index
+
+*** Types and Objects                                             :9:minutes:
+
+   - ascii :: Return a =representation= =string= with non-ASCII characters escaped similar to Python 2
+   - bool :: Return a =Boolean= value, either =True= or =False= based on the truthiness of the given value.  =bool= is a subclass of =int=.
+   - bytearray :: Return a new array of bytes, which is a mutable sequence of =integers= in the range ~0 <= x < 256~
+   - bytes :: Return a new =bytes= instance which is an immutable sequence of =integers= in the range ~0 <= x < 256~
+   - chr :: Return the =string= representing the Unicode code point of the given =integer=. Inverse of =ord=.
+   - classmethod :: Function =decorator= that transforms a =method= into a =class method= invokable from the class rather than object with class variables
+   - delattr :: Delete a member attribute of an object given the object and =string= name, if allowed
+   - dict :: Create a new =dictionary= mapping object potentially from the given iterable, mapping, and keyword arguments
+   - dir :: Return the list of names in current local scope or the list of member attributes for the given value
+   - hash :: Return the hash value of the object (if it has one) which is an integer used for dictionary keys
+   - memoryview :: Create a [[https://docs.python.org/3/library/stdtypes.html#typememoryview][memoryview]] object from an object that implements the [[https://docs.python.org/3/c-api/buffer.html#bufferobjects][buffer protocol]]
+   - object :: Return a new featureless =object=
+   - ord :: Return the =integer= representing the Unicode code point given a =string= of a single character. Inverse of =chr=.
+   - property :: Return a =property= member attribute, typically used as a =decorator= to create getters and optional setters and deleters
+   - repr :: Return a =string= =representation= of the given type, which in most cases should cause the same value to be created if passed to =eval=
+   - setattr :: Set a member attribute of an object give the object, =string= name, and value, if allowed
+   - staticmethod :: Function =decorator= that transforms a =method= into a =static method= invokable from the class rather than the object
+   - str :: Return a new =string= version of the given object
+   - super :: Return a proxy object that delegates the method calls to a parent or sibling class of =type= if given or the current class if not
+   - type :: Return the =type= of the given object, or, create a new class given =string= name, =tuple= of =string= bases, and a =dictionary= of member attributes
+
+*** Language Primitives                                           :9:minutes:
+
+   - compile :: Compile the given =string= source code and filename into a =code= or =AST= object
+   - eval :: Evaluate the given =string= *expression* or =code= object in the given environment
+   - exec :: Execute the given =string= or =code= object in the given environment
+   - globals :: Return a dictionary representing the current global symbol table
+   - help :: Display documentation strings for the given =object= or =function=
+   - id :: Return the identity of an object, which is an =integer= guaranteed to be unique for the object's lifetime
+   - input :: Return input from, typically *STDIN*, and output a =string= prompt if given
+   - locals :: Return a dictionary representing the current local symbol table
+   - open :: Open the file with the given =string= name and optional mode, returning the =file= object
+   - print :: Output a =string= to, typically, *STDOUT*
+   - vars :: Return the =__dict__= member attribute of the given object
+   - __import__ :: The function invoked by the =import= statement which imports a new module (but use =importlib.import_module= instead)
+
+** Libraries                                                     :30:minutes:
+*** [[https://docs.python.org/3/library/sys.html][sys]]                                                           :6:minutes:
+*** [[https://docs.python.org/3/library/os.html][os]]                                                            :6:minutes:
+*** [[https://docs.python.org/3/library/random.html][random]]                                                        :6:minutes:    
+*** [[https://docs.python.org/3/library/collections.html][collections]]                                                   :6:minutes:
+*** [[https://docs.python.org/3/library/itertools.html][itertools]]                                                     :6:minutes:
+*** [[https://docs.python.org/3/library/json.html][json]]                                                          :6:minutes:
+*** [[https://docs.python.org/3/library/functools.html][functools]]                                                     :6:minutes:
