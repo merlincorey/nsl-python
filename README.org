@@ -86,7 +86,7 @@
 
     - Work on adventure games
 
-* [[file:classes/programming-101-introduction-to-python/index.org][Programming 201: Intermediate Python]]
+* [[file:classes/programming-201-intermediate-python/index.org][Programming 201: Intermediate Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
 
