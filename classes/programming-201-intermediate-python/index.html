@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-02-16 Fri 11:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="merlin" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org197b36c">1. Programming 201: Intermediate Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="30">30</span>&#xa0;<span class="minutes">minutes</span>&#xa0;<span class="welcome">welcome</span>&#xa0;<span class="setup">setup</span></span></a>
+<ul>
+<li><a href="#orgb47d8b0">1.1. How to virtualenv&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org6e2a433">1.2. How to jupyter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#orga70b4ec">1.2.1. Makefile&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bonus">bonus</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org3852b9e">1.3. Further resources&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#orga54f8e5">1.3.1. pip User Guide</a></li>
+<li><a href="#orga9834f8">1.3.2. virtualenv User Guide</a></li>
+<li><a href="#org990c917">1.3.3. Python 3 Documentation: Tutorial</a></li>
+<li><a href="#orgcd2d12b">1.3.4. Python 3 Documentation: IDLE</a></li>
+<li><a href="#org8dcb039">1.3.5. Python course at Codecademy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8285ccc">2. Reviewing Programming 101: Introduction to Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="60">60</span>&#xa0;<span class="minutes">minutes</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#orgb987424">2.1. Why Python is BALLER&#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">5</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgc8b0188">2.2. Types, variables, operators, conditionals, loops, and functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="55">55</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#org7f36a6b">2.2.1. Types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org0adae53">2.2.2. Variables&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org69b17ec">2.2.3. Operators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org68dd46b">2.2.4. Conditionals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orge1cbd25">2.2.5. Loops&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgd9dbe2f">2.2.6. Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0a8722c">3. Intermediate Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="45">45</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#org9789761">3.1. Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgab40593">3.2. Classes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org2e82d92">3.3. Generators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orge18f293">3.4. Comprehensions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgf3a9372">3.5. Modules and Packages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orgb33aefb">4. Intermission&#xa0;&#xa0;&#xa0;<span class="tag"><span class="15">15</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgadbfaa5">5. Standard Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="90">90</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#org49e492c">5.1. Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="60">60</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#org1c9f0bd">5.1.1. Numeric&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org6f98a39">5.1.2. Logicical Predicates&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orgad3eb1b">5.1.3. Functional and Iterable&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org5835272">5.1.4. Types and Objects&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#orga1007e1">5.1.5. Language Primitives&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orge9152c2">5.2. Libraries&#xa0;&#xa0;&#xa0;<span class="tag"><span class="30">30</span>&#xa0;<span class="minutes">minutes</span></span></a>
+<ul>
+<li><a href="#orgbace4d5">5.2.1. sys&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org8c47282">5.2.2. os&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org4d0acb2">5.2.3. random&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org22499a4">5.2.4. collections&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org1259ef5">5.2.5. itertools&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org47962ac">5.2.6. json&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+<li><a href="#org2690dc5">5.2.7. functools&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org197b36c" class="outline-2">
+<h2 id="org197b36c"><span class="section-number-2">1</span> Programming 201: Intermediate Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="30">30</span>&#xa0;<span class="minutes">minutes</span>&#xa0;<span class="welcome">welcome</span>&#xa0;<span class="setup">setup</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Welcome to <b>NSL 3.0's</b> class <b>Programming 201: Intermediate Python</b> where you, the aspiring Python Hacker will watch, learn, and do in your quest to create.
+</p>
+
+<p>
+This is an intermediate level exploration immediately following our beginner level <b>Programming 101: Introduction to Python</b>.
+</p>
+
+<p>
+Hopefully you at least have:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://python.org/download/">Python</a> <b>version 3</b> available to you</li>
+<li><a href="https://virtualenv.pypa.io/">virtualenv</a> installed with your operating system or <a href="https://pip.pypa.io/en/stable/installing/">pip</a></li>
+<li>An <a href="https://docs.python.org/3/library/idle.html">IDE</a> or <a href="https://www.gnu.org/software/emacs/">editor</a> of <a href="http://www.vim.org/">some</a> <a href="https://www.sublimetext.com/">kind</a> for editing python files</li>
+</ul>
+
+<p>
+This class is interactive and you should feel free to follow along in your own environments and ask questions whenever you need &#x2013; others probably have the same questions, so be brave!
+</p>
+</div>
+
+<div id="outline-container-orgb47d8b0" class="outline-3">
+<h3 id="orgb47d8b0"><span class="section-number-3">1.1</span> How to virtualenv&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+On most systems once you have <code>virtualenv</code> installed you can create a new environment with Python 3 like so:
+</p>
+
+<pre class="example">
+   $ virtualenv -p python3 env
+   Already using interpreter /usr/bin/python3
+   Using base prefix '/usr'
+   New python executable in env/bin/python3
+   Also creating executable in env/bin/python
+   Installing setuptools, pkg_resources, pip, wheel...done.
+</pre>
+
+<p>
+On windows you should use <code>py -m virtualenv -p python3 env</code>.
+</p>
+
+<p>
+Virtual environment activation is done by executing a script called activate.
+There are several versions to support several different shells.
+Most commonly you will use one of the following methods:
+</p>
+
+<pre class="example">
+   $ source env/bin/activate
+</pre>
+
+<pre class="example">
+   $ . env/bin/activate
+</pre>
+
+<pre class="example">
+   PS&gt; env\Scripts\activate
+</pre>
+
+<p>
+Simply close your terminal or use the command <code>deactivate</code> to break out of an activated virtual environment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e2a433" class="outline-3">
+<h3 id="org6e2a433"><span class="section-number-3">1.2</span> How to jupyter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Once you have an activated virtual environment, you can use <code>pip</code> to install <code>jupyter</code>.
+</p>
+
+<pre class="example">
+   $ pip install jupyter
+</pre>
+
+<pre class="example">
+   PS&gt; py -m pip install jupyter
+</pre>
+
+<pre class="example">
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl
+Collecting jupyter-console (from jupyter)
+  Downloading jupyter_console-5.2.0-py2.py3-none-any.whl
+Collecting ipywidgets (from jupyter)
+  Downloading ipywidgets-7.1.1-py2.py3-none-any.whl (68kB)
+    100% |████████████████████████████████| 71kB 706kB/s
+Collecting qtconsole (from jupyter)
+  Downloading qtconsole-4.3.1-py2.py3-none-any.whl (108kB)
+    100% |████████████████████████████████| 112kB 1.1MB/s
+Collecting ipykernel (from jupyter)
+  Downloading ipykernel-4.8.0-py3-none-any.whl (108kB)
+    100% |████████████████████████████████| 112kB 982kB/s
+Collecting nbconvert (from jupyter)
+  Downloading nbconvert-5.3.1-py2.py3-none-any.whl (387kB)
+    100% |████████████████████████████████| 389kB 728kB/s
+Collecting notebook (from jupyter)
+  Downloading notebook-5.4.0-py2.py3-none-any.whl (8.0MB)
+    100% |████████████████████████████████| 8.0MB 84kB/s
+Collecting jupyter-client (from jupyter-console-&gt;jupyter)
+  Downloading jupyter_client-5.2.2-py2.py3-none-any.whl (88kB)
+    100% |████████████████████████████████| 92kB 1.2MB/s
+Collecting ipython (from jupyter-console-&gt;jupyter)
+  Using cached ipython-6.2.1-py3-none-any.whl
+Collecting prompt-toolkit&lt;2.0.0,&gt;=1.0.0 (from jupyter-console-&gt;jupyter)
+  Using cached prompt_toolkit-1.0.15-py3-none-any.whl
+Collecting pygments (from jupyter-console-&gt;jupyter)
+  Using cached Pygments-2.2.0-py2.py3-none-any.whl
+...
+Successfully built tornado pandocfilters
+Installing collected packages: six, ipython-genutils, decorator, traitlets, tornado, jupyter-core, python-dateutil, pyzmq, jupyter-client, pickleshare, simplegeneric, pygments, ptyprocess, pexpect, wcwidth, prompt-toolkit, parso, jedi, ipython, ipykernel, jupyter-console, Send2Trash, terminado, MarkupSafe, jinja2, jsonschema, nbformat, testpath, pandocfilters, webencodings, html5lib, bleach, entrypoints, mistune, nbconvert, notebook, widgetsnbextension, ipywidgets, qtconsole, jupyter
+Successfully installed MarkupSafe-1.0 Send2Trash-1.4.2 bleach-2.1.2 decorator-4.2.1 entrypoints-0.2.3 html5lib-1.0.1 ipykernel-4.8.0 ipython-6.2.1 ipython-genutils-0.2.0 ipywidgets-7.1.1 jedi-0.11.1 jinja2-2.10 jsonschema-2.6.0 jupyter-1.0.0 jupyter-client-5.2.2 jupyter-console-5.2.0 jupyter-core-4.4.0 mistune-0.8.3 nbconvert-5.3.1 nbformat-4.4.0 notebook-5.4.0 pandocfilters-1.4.2 parso-0.1.1 pexpect-4.3.1 pickleshare-0.7.4 prompt-toolkit-1.0.15 ptyprocess-0.5.2 pygments-2.2.0 python-dateutil-2.6.1 pyzmq-16.0.4 qtconsole-4.3.1 simplegeneric-0.8.1 six-1.11.0 terminado-0.8.1 testpath-0.3.1 tornado-4.5.3 traitlets-4.3.2 wcwidth-0.1.7 webencodings-0.5.1 widgetsnbextension-3.1.3
+</pre>
+
+<p>
+Now run <code>jupyter notebook</code> to start the notebook server and open a browser to <a href="http://localhost:8888/tree">http://localhost:8888/tree</a>.
+</p>
+
+<p>
+Alternatively, you can run <code>jupyter console</code> for a console notebook experience.
+</p>
+
+<p>
+Finally, just use <code>ipython</code> if you just want an enhanced python shell but don't need to store your inputs and outputs.
+</p>
+
+<p>
+Easy as <b>Pie-thon</b>!
+</p>
+</div>
+
+<div id="outline-container-orga70b4ec" class="outline-4">
+<h4 id="orga70b4ec"><span class="section-number-4">1.2.1</span> Makefile&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bonus">bonus</span></span></h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+This repository comes with a top-level Makefile that will create a top-level environment and install all the packages used in these lessons.
+</p>
+
+<dl class="org-dl">
+<dt>init</dt><dd>Target to initialize an environment by creating it and installing requirements in it</dd>
+<dt>env</dt><dd>Target to create environment if not already created</dd>
+<dt>requirements</dt><dd>Target to activate if necessary and install the requirements.txt packages into the environment</dd>
+<dt>jupyter-start</dt><dd>Target to start a jupyter notebook in <code>JUPYTER_PATH</code></dd>
+<dt>jupyter-publish</dt><dd>Target to publish <code>JUPYTER_PATH</code>'s notebooks into HTML files</dd>
+</dl>
+
+<p>
+Unfortunately, this will not work on Windows, generally and historically.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3852b9e" class="outline-3">
+<h3 id="org3852b9e"><span class="section-number-3">1.3</span> Further resources&#xa0;&#xa0;&#xa0;<span class="tag"><span class="10">10</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-orga54f8e5" class="outline-4">
+<h4 id="orga54f8e5"><span class="section-number-4">1.3.1</span> <a href="https://pip.pypa.io/en/stable/user_guide/">pip User Guide</a></h4>
+</div>
+<div id="outline-container-orga9834f8" class="outline-4">
+<h4 id="orga9834f8"><span class="section-number-4">1.3.2</span> <a href="https://virtualenv.pypa.io/en/stable/userguide/">virtualenv User Guide</a></h4>
+</div>
+<div id="outline-container-org990c917" class="outline-4">
+<h4 id="org990c917"><span class="section-number-4">1.3.3</span> <a href="http://docs.python.org/3/tutorial/">Python 3 Documentation: Tutorial</a></h4>
+</div>
+<div id="outline-container-orgcd2d12b" class="outline-4">
+<h4 id="orgcd2d12b"><span class="section-number-4">1.3.4</span> <a href="https://docs.python.org/3/library/idle.html">Python 3 Documentation: IDLE</a></h4>
+</div>
+<div id="outline-container-org8dcb039" class="outline-4">
+<h4 id="org8dcb039"><span class="section-number-4">1.3.5</span> <a href="http://www.codecademy.com/tracks/python">Python course at Codecademy</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org8285ccc" class="outline-2">
+<h2 id="org8285ccc"><span class="section-number-2">2</span> Reviewing Programming 101: Introduction to Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="60">60</span>&#xa0;<span class="minutes">minutes</span>&#xa0;<span class="review">review</span></span></h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-orgb987424" class="outline-3">
+<h3 id="orgb987424"><span class="section-number-3">2.1</span> Why Python is BALLER&#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">5</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+<dl class="org-dl">
+<dt>Easy to Learn and Use</dt><dd><code>Writeability</code>, <code>Readability</code>, and <code>Discoverability</code></dd>
+<dt>Easy to Prototype</dt><dd><code>Recyclability</code>, <code>Lingua Franca</code></dd>
+<dt>Easy to Deploy</dt><dd><code>Embedability</code>, <code>Portability</code>, and <code>Packagability</code></dd>
+</dl>
+
+<p>
+<a href="https://xkcd.com/353/">Artist rendering of Why Python is BALLER</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8b0188" class="outline-3">
+<h3 id="orgc8b0188"><span class="section-number-3">2.2</span> Types, variables, operators, conditionals, loops, and functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="55">55</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-org7f36a6b" class="outline-4">
+<h4 id="org7f36a6b"><span class="section-number-4">2.2.1</span> Types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-1">
+<dl class="org-dl">
+<dt>Types</dt><dd><b>abstract</b> descriptions of the <b>state</b> and <b>behavior</b> of an idealized <code>class</code> of <code>objects</code> (mostly compile-time)</dd>
+<dt>Objects</dt><dd><b>concrete</b> instances of a type of <code>class</code> (always run-time)</dd>
+<dt>hacker</dt><dd>A <code>class</code></dd>
+<dt>you</dt><dd>An <code>object</code> or instance of <code>class hacker</code></dd>
+<dt>me</dt><dd>A different <code>object</code> or instance of <code>class hacker</code></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org0adae53" class="outline-4">
+<h4 id="org0adae53"><span class="section-number-4">2.2.2</span> Variables&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-2">
+<dl class="org-dl">
+<dt>Variables</dt><dd>Valid <a href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">identifier</a> named <b>values</b> of particular <b>objects</b></dd>
+<dt>you, me</dt><dd>Variables, of course!</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org69b17ec" class="outline-4">
+<h4 id="org69b17ec"><span class="section-number-4">2.2.3</span> Operators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-3">
+<dl class="org-dl">
+<dt>Operations</dt><dd>An area of management concerned with designing and controlling the process of production and redesigning business <b>operations</b> in the production of goods or services</dd>
+<dt>Operations</dt><dd>Methods of manipulating and inspecting <code>objects</code></dd>
+<dt>+</dt><dd>Addition operator, usually used to <b>add</b> things together in some manner</dd>
+<dt>.</dt><dd>Dot operator, used to refer to <code>class</code> member attributes</dd>
+<dt><code>you.age + me.age</code></dt><dd>Your age, plus my age, equals <b>a meaningless number</b></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org68dd46b" class="outline-4">
+<h4 id="org68dd46b"><span class="section-number-4">2.2.4</span> Conditionals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-4">
+<dl class="org-dl">
+<dt>Conditionals</dt><dd>Logical conditions using <a href="https://en.wikipedia.org/wiki/Boolean_algebra">boolean algebra</a> to <b>branch</b> code into choices of what to do</dd>
+<dt><code>'even' if you.age % 2 == 0 else 'odd'</code></dt><dd>Find out if you're an <b>odd</b> hacker today!</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orge1cbd25" class="outline-4">
+<h4 id="orge1cbd25"><span class="section-number-4">2.2.5</span> Loops&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-5">
+<dl class="org-dl">
+<dt>Loops</dt><dd>Repeating code infinitely or over a sequence of things</dd>
+<dt>while True: print('loops repeat things')</dt><dd><code>loops repeat things loops repeat things loops repeat things loops repeat things loops repeat things...</code></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgd9dbe2f" class="outline-4">
+<h4 id="orgd9dbe2f"><span class="section-number-4">2.2.6</span> Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">7</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-2-2-6">
+<dl class="org-dl">
+<dt>Functions</dt><dd>Stored <b>procedures</b>, or recipes, of code that can be <b>invoked</b> later and <b>return</b> some value</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0a8722c" class="outline-2">
+<h2 id="org0a8722c"><span class="section-number-2">3</span> Intermediate Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="45">45</span>&#xa0;<span class="minutes">minutes</span></span></h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org9789761" class="outline-3">
+<h3 id="org9789761"><span class="section-number-3">3.1</span> Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-3-1">
+<dl class="org-dl">
+<dt>Variadic</dt><dd>The property of a <code>function</code> that can receive a <b>variable</b> number of arguments</dd>
+<dt>Optional</dt><dd>Defaults can be set for arguments of a function rendering them <b>optional</b></dd>
+<dt>Keyword</dt><dd>Keyword arguments are the basis of <b>optional</b> arguments and are part of variadic arguments</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgab40593" class="outline-3">
+<h3 id="orgab40593"><span class="section-number-3">3.2</span> Classes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-3-2">
+<dl class="org-dl">
+<dt>class</dt><dd>Keyword to define a new <code>class</code></dd>
+<dt>_<sub>init</sub>__</dt><dd>Method called when an <code>object</code> of a <code>class</code> is <b>instantiated</b></dd>
+<dt>_<sub>str</sub>__</dt><dd>Method called when an <code>object</code> is converted to a string</dd>
+<dt>_<sub>repr</sub>__</dt><dd>Method called when the <code>representation</code> of an <code>object</code> is needed</dd>
+</dl>
+
+<p>
+See <a href="https://docs.python.org/3/reference/datamodel.html#basic-customization">Python3 Documentation - Basic Configuration</a> for more!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e82d92" class="outline-3">
+<h3 id="org2e82d92"><span class="section-number-3">3.3</span> Generators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-3-3">
+<dl class="org-dl">
+<dt>Coroutines</dt><dd>Special functions for <a href="https://en.wikipedia.org/wiki/Cooperative_multitasking">cooperative multitasking</a></dd>
+<dt>yield</dt><dd>Keyword to communicate a return value and potentially receive an input value from a <b>coroutine</b></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orge18f293" class="outline-3">
+<h3 id="orge18f293"><span class="section-number-3">3.4</span> Comprehensions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-3-4">
+<dl class="org-dl">
+<dt>Comprehensions</dt><dd>Special <b>syntax</b> that emulates <b>Mathematics</b> <a href="https://en.wikipedia.org/wiki/Set-builder_notation">set-builder notation</a></dd>
+<dt>{x | x in S and x even}</dt><dd>Mathematical set notation describing <code>the set of values x in set S that are even</code></dd>
+<dt>Comprehesion Types</dt><dd>Python supports <b>comprehensions</b> for <code>lists</code>, <code>generators</code>, <code>dictionaries</code>, and <code>sets</code></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgf3a9372" class="outline-3">
+<h3 id="orgf3a9372"><span class="section-number-3">3.5</span> Modules and Packages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-3-5">
+<dl class="org-dl">
+<dt>Modules</dt><dd>Every python file is a <b>module</b></dd>
+<dt>Packages</dt><dd>Any folder with an <code>__init__.py</code> is a <b>package</b> of <b>modules</b></dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb33aefb" class="outline-2">
+<h2 id="orgb33aefb"><span class="section-number-2">4</span> Intermission&#xa0;&#xa0;&#xa0;<span class="tag"><span class="15">15</span>&#xa0;<span class="minutes">minutes</span></span></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+On the origins of Python, Van Rossum wrote in <b>1996</b>:
+</p>
+
+<blockquote>
+<p>
+&#x2026;In December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office &#x2026; would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
+— Guido van Rossum
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=WwIbaYstoPs">A Selection of Sketches from "Monty Python's Flying Circus" - #1</a></li>
+<li><a href="https://www.youtube.com/watch?v=JXfosKV7jIo">A Selection of Sketches from "Monty Python's Flying Circus" - #2</a></li>
+<li><a href="https://www.youtube.com/watch?v=AxheoB6QbDc">A Selection of Sketches from "Monty Python's Flying Circus" - #3</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgadbfaa5" class="outline-2">
+<h2 id="orgadbfaa5"><span class="section-number-2">5</span> Standard Python&#xa0;&#xa0;&#xa0;<span class="tag"><span class="90">90</span>&#xa0;<span class="minutes">minutes</span></span></h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-org49e492c" class="outline-3">
+<h3 id="org49e492c"><span class="section-number-3">5.1</span> Functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="60">60</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+The <a href="https://docs.python.org/3/library/functions.html">Python 3 Documentation: Built-in Functions</a> lists <b>68</b> functions which we will further break into <b>5</b> categories.
+</p>
+</div>
+
+<div id="outline-container-org1c9f0bd" class="outline-4">
+<h4 id="org1c9f0bd"><span class="section-number-4">5.1.1</span> Numeric&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-5-1-1">
+<dl class="org-dl">
+<dt>abs</dt><dd>ABSolute value of a number</dd>
+<dt>bin</dt><dd>Convert an <code>integer</code> to a string literal <code>representation</code> of the value in binary (base 2)</dd>
+<dt>complex</dt><dd>Return a <code>complex</code> number with the value <code>real + (imaginary * 1i)</code> given a <code>string</code> representing a complex number or two <code>integers</code></dd>
+<dt>divmod</dt><dd>Integer divide two non-complex numbers and return a <code>pair</code> of the <code>(quotient, remainder)</code></dd>
+<dt>float</dt><dd>Convert an object to a floating point value, including "NaN" and "Infinity"</dd>
+<dt>hex</dt><dd>Convert an integer to a <code>string</code> literal <code>representation</code> of the value in hexadecimal (base 16)</dd>
+<dt>int</dt><dd>Convert an object to an <code>integer</code> value, including <code>string</code> literal <code>representations</code> in other bases</dd>
+<dt>max</dt><dd>Maximum value of a sequence of numbers</dd>
+<dt>min</dt><dd>Minimum value of a sequence of numbers</dd>
+<dt>oct</dt><dd>Convert an <code>integer</code> to a <code>string</code> literal <code>representation</code> of the value in octal (base 8)</dd>
+<dt>round</dt><dd>Round a floating point number to the nearest <code>integer</code> or number of decimal places given</dd>
+<dt>pow</dt><dd>Power of <code>X to the Y</code> or power of <code>X to the Y modulus Z</code></dd>
+<dt>sum</dt><dd>Summation of a sequence of numbers</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org6f98a39" class="outline-4">
+<h4 id="org6f98a39"><span class="section-number-4">5.1.2</span> Logicical Predicates&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-5-1-2">
+<dl class="org-dl">
+<dt>all</dt><dd>Predicate that returns <code>True</code> if every value in the given sequence is truthy</dd>
+<dt>any</dt><dd>Predicate that returns <code>True</code> if at least one value in the given sequence is truthy</dd>
+<dt>callable</dt><dd>Predicate that returns <code>True</code> if the given value is a <code>callable</code> function</dd>
+<dt>hasattr</dt><dd>Predicate that returns <code>True</code> if the given object has a member attribute with the same name as the given <code>string</code></dd>
+<dt>isinstance</dt><dd>Predicate that returns <code>True</code> if the given value is an instance of the given class or classes</dd>
+<dt>issubclass</dt><dd>Predicate that returns <code>True</code> if the given value is a subclass or the same class</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgad3eb1b" class="outline-4">
+<h4 id="orgad3eb1b"><span class="section-number-4">5.1.3</span> Functional and Iterable&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-5-1-3">
+<dl class="org-dl">
+<dt>enumerate</dt><dd>Return an enumerate object given an <code>iterable</code> sequence which yields <code>pairs</code> of <code>(index, value)</code></dd>
+<dt>filter</dt><dd>Return an <code>iterator</code> given an <code>iterable</code> whose values return <code>True</code> with the given <code>predicate</code> function</dd>
+<dt>frozenset</dt><dd>Return a new immutable <code>frozenset</code> optionally with elements taken from an <code>iterable</code></dd>
+<dt>iter</dt><dd>Return an <code>iterator</code> from the given object, optionally stopping at some <code>sentinel</code> value</dd>
+<dt>len</dt><dd>Return the length of a sequence</dd>
+<dt>list</dt><dd>Return a <code>list</code> from the given object</dd>
+<dt>map</dt><dd>Return an <code>iterator</code> that applies the given function to every item and yields the results</dd>
+<dt>next</dt><dd>Retrieve the next item from the <code>iterator</code> by calling its <code>__next__</code> method</dd>
+<dt>range</dt><dd>Return a <code>range</code> of numbers which are yielded as needed. <a href="https://docs.python.org/3/library/stdtypes.html#typesseq-range">Ranges</a> are an immutable <a href="https://docs.python.org/3/library/stdtypes.html#typesseq">sequence type</a></dd>
+<dt>reversed</dt><dd>Return a reverse <code>iterator</code> of the given sequence</dd>
+<dt>set</dt><dd>Return a new <code>set</code> optionally with elements taken from an <code>iterable</code></dd>
+<dt>slice</dt><dd>Return a <code>slice</code> representing the set of indices specified by =range(start, stop, step)</dd>
+<dt>sorted</dt><dd>Return a new sorted list from the given <code>iterable</code></dd>
+<dt>tuple</dt><dd>Return an immutable sequence from the given object</dd>
+<dt>zip</dt><dd>Return an <code>iterator</code> that aggregates elements from each given <code>iterable</code> into tuples of values for each index</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org5835272" class="outline-4">
+<h4 id="org5835272"><span class="section-number-4">5.1.4</span> Types and Objects&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-5-1-4">
+<dl class="org-dl">
+<dt>ascii</dt><dd>Return a <code>representation</code> <code>string</code> with non-ASCII characters escaped similar to Python 2</dd>
+<dt>bool</dt><dd>Return a <code>Boolean</code> value, either <code>True</code> or <code>False</code> based on the truthiness of the given value.  <code>bool</code> is a subclass of <code>int</code>.</dd>
+<dt>bytearray</dt><dd>Return a new array of bytes, which is a mutable sequence of <code>integers</code> in the range <code>0 &lt;= x &lt; 256</code></dd>
+<dt>bytes</dt><dd>Return a new <code>bytes</code> instance which is an immutable sequence of <code>integers</code> in the range <code>0 &lt;= x &lt; 256</code></dd>
+<dt>chr</dt><dd>Return the <code>string</code> representing the Unicode code point of the given <code>integer</code>. Inverse of <code>ord</code>.</dd>
+<dt>classmethod</dt><dd>Function <code>decorator</code> that transforms a <code>method</code> into a <code>class method</code> invokable from the class rather than object with class variables</dd>
+<dt>delattr</dt><dd>Delete a member attribute of an object given the object and <code>string</code> name, if allowed</dd>
+<dt>dict</dt><dd>Create a new <code>dictionary</code> mapping object potentially from the given iterable, mapping, and keyword arguments</dd>
+<dt>dir</dt><dd>Return the list of names in current local scope or the list of member attributes for the given value</dd>
+<dt>hash</dt><dd>Return the hash value of the object (if it has one) which is an integer used for dictionary keys</dd>
+<dt>memoryview</dt><dd>Create a <a href="https://docs.python.org/3/library/stdtypes.html#typememoryview">memoryview</a> object from an object that implements the <a href="https://docs.python.org/3/c-api/buffer.html#bufferobjects">buffer protocol</a></dd>
+<dt>object</dt><dd>Return a new featureless <code>object</code></dd>
+<dt>ord</dt><dd>Return the <code>integer</code> representing the Unicode code point given a <code>string</code> of a single character. Inverse of <code>chr</code>.</dd>
+<dt>property</dt><dd>Return a <code>property</code> member attribute, typically used as a <code>decorator</code> to create getters and optional setters and deleters</dd>
+<dt>repr</dt><dd>Return a <code>string</code> <code>representation</code> of the given type, which in most cases should cause the same value to be created if passed to <code>eval</code></dd>
+<dt>setattr</dt><dd>Set a member attribute of an object give the object, <code>string</code> name, and value, if allowed</dd>
+<dt>staticmethod</dt><dd>Function <code>decorator</code> that transforms a <code>method</code> into a <code>static method</code> invokable from the class rather than the object</dd>
+<dt>str</dt><dd>Return a new <code>string</code> version of the given object</dd>
+<dt>super</dt><dd>Return a proxy object that delegates the method calls to a parent or sibling class of <code>type</code> if given or the current class if not</dd>
+<dt>type</dt><dd>Return the <code>type</code> of the given object, or, create a new class given <code>string</code> name, <code>tuple</code> of <code>string</code> bases, and a <code>dictionary</code> of member attributes</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orga1007e1" class="outline-4">
+<h4 id="orga1007e1"><span class="section-number-4">5.1.5</span> Language Primitives&#xa0;&#xa0;&#xa0;<span class="tag"><span class="9">9</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+<div class="outline-text-4" id="text-5-1-5">
+<dl class="org-dl">
+<dt>compile</dt><dd>Compile the given <code>string</code> source code and filename into a <code>code</code> or <code>AST</code> object</dd>
+<dt>eval</dt><dd>Evaluate the given <code>string</code> <b>expression</b> or <code>code</code> object in the given environment</dd>
+<dt>exec</dt><dd>Execute the given <code>string</code> or <code>code</code> object in the given environment</dd>
+<dt>globals</dt><dd>Return a dictionary representing the current global symbol table</dd>
+<dt>help</dt><dd>Display documentation strings for the given <code>object</code> or <code>function</code></dd>
+<dt>id</dt><dd>Return the identity of an object, which is an <code>integer</code> guaranteed to be unique for the object's lifetime</dd>
+<dt>input</dt><dd>Return input from, typically <b>STDIN</b>, and output a <code>string</code> prompt if given</dd>
+<dt>locals</dt><dd>Return a dictionary representing the current local symbol table</dd>
+<dt>open</dt><dd>Open the file with the given <code>string</code> name and optional mode, returning the <code>file</code> object</dd>
+<dt>print</dt><dd>Output a <code>string</code> to, typically, <b>STDOUT</b></dd>
+<dt>vars</dt><dd>Return the <code>__dict__</code> member attribute of the given object</dd>
+<dt>_<sub>import</sub>__</dt><dd>The function invoked by the <code>import</code> statement which imports a new module (but use <code>importlib.import_module</code> instead)</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9152c2" class="outline-3">
+<h3 id="orge9152c2"><span class="section-number-3">5.2</span> Libraries&#xa0;&#xa0;&#xa0;<span class="tag"><span class="30">30</span>&#xa0;<span class="minutes">minutes</span></span></h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-orgbace4d5" class="outline-4">
+<h4 id="orgbace4d5"><span class="section-number-4">5.2.1</span> <a href="https://docs.python.org/3/library/sys.html">sys</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org8c47282" class="outline-4">
+<h4 id="org8c47282"><span class="section-number-4">5.2.2</span> <a href="https://docs.python.org/3/library/os.html">os</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org4d0acb2" class="outline-4">
+<h4 id="org4d0acb2"><span class="section-number-4">5.2.3</span> <a href="https://docs.python.org/3/library/random.html">random</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org22499a4" class="outline-4">
+<h4 id="org22499a4"><span class="section-number-4">5.2.4</span> <a href="https://docs.python.org/3/library/collections.html">collections</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org1259ef5" class="outline-4">
+<h4 id="org1259ef5"><span class="section-number-4">5.2.5</span> <a href="https://docs.python.org/3/library/itertools.html">itertools</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org47962ac" class="outline-4">
+<h4 id="org47962ac"><span class="section-number-4">5.2.6</span> <a href="https://docs.python.org/3/library/json.html">json</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+<div id="outline-container-org2690dc5" class="outline-4">
+<h4 id="org2690dc5"><span class="section-number-4">5.2.7</span> <a href="https://docs.python.org/3/library/functools.html">functools</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">6</span>&#xa0;<span class="minutes">minutes</span></span></h4>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: merlin</p>
+<p class="date">Created: 2018-02-16 Fri 11:32</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
