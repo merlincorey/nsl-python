@@ -22,7 +22,7 @@
 
    | Level           | Class                  | Cost |
    |-----------------+------------------------+------|
-   | Programming 101 | Introduction to Python | $30  |
+   | Programming 101 | Introduction to Python | $40  |
    | Programming 201 | Intermediate Python    | $60  |
    | Programming 301 | Advanced Python        | $100 |
 
