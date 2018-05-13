@@ -22,7 +22,7 @@
 
    | Level           | Class                  | Cost |
    |-----------------+------------------------+------|
-   | Programming 101 | Introduction to Python | $30  |
+   | Programming 101 | Introduction to Python | $40  |
    | Programming 201 | Intermediate Python    | $60  |
    | Programming 301 | Advanced Python        | $100 |
 
@@ -86,7 +86,7 @@
 
     - Work on adventure games
 
-* [[file:classes/programming-101-introduction-to-python/index.org][Programming 201: Intermediate Python]]
+* [[file:classes/programming-201-intermediate-python/index.org][Programming 201: Intermediate Python]]
 
   Learn all about programming with the easy-to-learn and use language: Python!
 
