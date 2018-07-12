@@ -1,13 +1,11 @@
+#+TITLE: Programming 101: Introduction to Python
 * Programming 101: Introduction to Python
-
   Welcome to *NSL 3.0's* class *Programming 101: Introduction to Python* where you, the aspiring Python Hacker will watch, learn, and do in your quest to create.
 
   This is a beginner's introduction but hopefully you at least have a copy of [[http://python.org/download/][Python]] *version 3* available to you and an editor of some kind (for later).
 
   This class is interactive and you should feel free to follow along in your own environments and ask questions whenever you need -- others probably have the same questions, so be brave!
-
 ** How to Python
-
    On most systems once you have Python installed you can start a *Python Shell* from any terminal or run bar by invoking =python=.  In some instances, this will open an [[https://docs.python.org/2/library/idle.html][IDLE]] shell.
 
    #+CAPTION: Starting Python from a Unix shell
@@ -26,14 +24,11 @@
    Type "help", "copyright", "credits" or "license" for more information.
    >>>
    #+END_EXAMPLE
-
 ** Further resources
-
    - [[http://docs.python.org/3/tutorial/][Python 3 Documentation: Tutorial]]
    - [[https://docs.python.org/3/library/idle.html][Python 3 Documentation: IDLE]]
    - [[http://www.codecademy.com/tracks/python][Python course at Codecademy]]
    - [[http://learnpython.org][Python course at LearnPython]]
-
 * Why Python is BALLER
 ** Pros
 
@@ -52,7 +47,7 @@
 ** Neutral
 
    - No Braces :: One less braceface in the world of programming
-   - BDFL :: [[https://gvanrossum.github.io][Guido Van Rossum]], *Benevolent Dictator For Life*
+   - BDFL :: [[https://gvanrossum.github.io][Guido Van Rossum]], *Benevolent Dictator For Life* - /UPDATE:/ [[https://mail.python.org/pipermail/python-committers/2018-July/005664.html][2018 July 12, Guido retires]]
    - Dynamic Ducks :: [[https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information][Dynamic Typing]] lends itself to some of the *pros* _and_ some of the *cons*, but it is just a fact of the language
    - Static Stoics :: [[https://docs.python.org/3/library/typing.html][Type Hints]] are available since *Python 3.5* and there is the [[http://mypy-lang.org][mypy static type checker]]
 
@@ -60,7 +55,7 @@
 
    - FIOC :: Forced Indentation of Code
    - GIL :: [[https://wiki.python.org/moin/GlobalInterpreterLock][Global Interpreter Lock]]
-   - [[http://benchmarksgame.alioth.debian.org/u64q/python.html][Expensive in Memory and CPU]] :: In part due to the above but also as a consequence of other language design and implementation choices
+   - [[https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/python3-gcc.html][Expensive in Memory and CPU]] :: In part due to the above but also as a consequence of other language design and implementation choices
    - Exceptional :: Exceptions have some benefits but they are, ultimately, [[https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf][potentially harmful]] and require discipline to use
    - Immobile :: Even though Python has a piece of the Embedded world, it doesn't correlate to a piece of the Mobile and Browser worlds
 
